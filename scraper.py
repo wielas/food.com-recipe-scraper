@@ -59,7 +59,7 @@ def unit_translation(list_of_ingredients):
         "pounds": 454,
         "pound": 454,
         "lbs": 454,
-
+        "lb": 454,
     }
 
     for key in unit_translation_to_grams.keys():
