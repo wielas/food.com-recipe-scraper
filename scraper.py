@@ -11,17 +11,13 @@ def quantity_from_url(url):
 
     # strip from tags
     quantity_list = [re.sub('<[^<]+?>', '', str(ingredient)).replace(" ", "") for ingredient in quantity_divs]
-    return quantity_list
 
-
-def units_from_url(url):
-    r = requests.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
     parts_divs = soup.find_all("div", class_="recipe-ingredients__ingredient-parts")
 
     # strip from tags
     parts_list = [re.sub('<[^<]+?>', '', str(ingredient)).strip() for ingredient in parts_divs]
-    return parts_list
+
+    return quantity_list, parts_list
 
 
 def unit_translation(list_of_ingredients):
