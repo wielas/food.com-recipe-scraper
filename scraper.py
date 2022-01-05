@@ -47,6 +47,9 @@ def unit_translation(list_of_ingredients):
 
         # "drops": "drops",
         # "drop": "drop",  # 0.05
+        # can, fluid ounce
+        # small, medium, large
+        # clove,
 
         # weight units (g)
         "ounces": 28,
@@ -56,6 +59,7 @@ def unit_translation(list_of_ingredients):
         "pound": 454,
         "lbs": 454,
         "lb": 454,
+
     }
 
     for key in unit_translation_to_grams.keys():
